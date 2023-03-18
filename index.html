@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Calculation</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6c0e978889.js" crossorigin="anonymous"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mt-4 mb-8">
+        <h1 class="text-3xl font-bold text-cyan-600 text-center font-montserrat">Expense Calculation
+            <i class="fa-solid fa-sack-dollar text-yellow-500"></i>
+        </h1>
+    </header>
+    <main class="flex justify-center container mx-auto">
+        <div class="h-96 w-96 mr-8">
+            <img src="/money.jpg" alt="money">
+        </div>
+        <div class="text-center">
+            <h3 class="font-sans font-semibold text-xl mb-4 underline decoration-sky-200">Income</h3>
+            <label for="salary" class="font-medium text-md">Salary: </label>
+            <input id="salary" type="text" class="bg-slate-200 px-4 py-2 outline-none mb-4" placeholder="$">
+            <h3 class="font-sans font-semibold text-xl mb-4 underline decoration-sky-200">Expenses</h3>
+            <div class="block mb-4">
+                <label for="food" class="font-medium text-md">Food: </label>
+                <input id="food" type="text" class="bg-slate-200 px-4 py-2 outline-none" placeholder="$">
+            </div>
+            <div class="block mb-4">
+                <label for="rent" class="font-medium text-md">Rent: </label>
+                <input id="rent" type="text" class="bg-slate-200 px-4 py-2 outline-none" placeholder="$">
+            </div>
+            <div class="block mb-4">
+                <label for="clothes" class="font-medium text-md">Clothes: </label>
+                <input id="clothes" type="text" class="bg-slate-200 px-4 py-2 outline-none" placeholder="$">
+            </div>
+            <button id="btn-calculate"
+                class="text-white bg-blue-500 hover:bg-blue-600 px-10 py-1.5 rounded font-semibold text-lg mb-4">Calculate</button>
+            <h3 class="font-sans font-semibold text-xl mb-4"><span class="underline decoration-sky-200">Total
+                    Expense:</span>
+                <span id="total-expense"></span>
+            </h3>
+            <h3 class="font-sans font-semibold text-xl mb-4"><span class="underline decoration-sky-200">Balance
+                    Left:</span>
+                <span id="balance-left"></span>
+            </h3>
+            <div class="block mb-4">
+                <label for="clothes" class="font-medium text-md">Save: </label>
+                <input id="save" type="text" class="bg-slate-200 px-4 py-2 w-36 outline-none" placeholder="%">
+                <span class="font-medium text-lg mx-3">%</span>
+                <button id="btn-save"
+                    class="text-white bg-blue-500 hover:bg-blue-600 px-12 py-1.5 rounded font-semibold text-lg mb-4">Save</button>
+            </div>
+            <h3 class="font-sans font-semibold text-xl mb-4"><span class="underline decoration-sky-200">Saving
+                    Amount:</span> <span id="saving-amount"></span></h3>
+            <h3 class="font-sans font-semibold text-xl mb-4"><span class="underline decoration-sky-200">Remaining
+                    Balance:</span> <span id="remaining-balance"></span>
+            </h3>
+        </div>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
